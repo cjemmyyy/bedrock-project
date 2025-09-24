@@ -15,3 +15,4 @@ kubeconfig
 # IDE
 .vscode/
 .idea/
+applications/microservices-demo-app/
