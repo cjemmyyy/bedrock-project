@@ -26,7 +26,7 @@ resource "aws_eks_cluster" "main" {
   version  = "1.28"
 
   vpc_config {
-    subnet_ids = module.vpc.private_subnets
+    subnet_ids              = module.vpc.private_subnets
     endpoint_private_access = true
     endpoint_public_access  = true
   }
@@ -40,7 +40,7 @@ resource "aws_eks_cluster" "main" {
 resource "aws_eks_node_group" "main" {
   cluster_name    = aws_eks_cluster.main.name
   node_group_name = "main"
-  node_role_arn   = aws_iam_role.eks_node_group.arn  # ← THIS WAS MISSING
+  node_role_arn   = aws_iam_role.eks_node_group.arn # ← THIS WAS MISSING
   subnet_ids      = module.vpc.private_subnets
   instance_types  = [var.node_instance_type]
 
