@@ -1,0 +1,7 @@
+# applications/microservices-demo/namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: aws-microservices-demo
+  labels:
+    name: aws-microservices-demo

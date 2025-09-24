@@ -1,0 +1,17 @@
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# AWS credentials
+*.pem
+*.key
+
+# Kubernetes
+kubeconfig
+*.kubeconfig
+
+# IDE
+.vscode/
+.idea/
